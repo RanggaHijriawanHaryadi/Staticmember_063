@@ -29,3 +29,19 @@ void mahasiswa::printAll() {
 	cout << "Nama  = " << nama << endl;
 	cout << endl;
 }
+int main() {
+	mahasiswa mhs1("Sri Dadi");
+	mahasiswa mhs2("Budi Jatmiko");
+	mahasiswa::setNim(9); //mengakses nim malalui static member function "setNim"
+	mahasiswa mhs3("Andi Janu");
+	mahasiswa mhs4("Joko wahono");
+
+	mhs1.printAll();
+	mhs2.printAll();
+	mhs3.printAll();
+	mhs4.printAll();
+
+	cout << " akses dari luar object = " << mahasiswa::getNim() << endl; //mengakses nim melalui staitic member function "getNim"
+
+	return 0;
+}
